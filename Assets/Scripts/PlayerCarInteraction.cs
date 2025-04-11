@@ -11,7 +11,7 @@ public class PlayerCarInteraction : MonoBehaviour
     [SerializeField] private TextMeshPro _enterText;
     private bool _playerIsDriving = false;
     private bool _canEnterCar = false;
-    private bool _canExitCar = false;
+    private bool _canExitCar = true;
     private PlayerCarController _playerCarController;
     private PlayerInput _playerInput;
     private PlayerMovement _playerMovement;

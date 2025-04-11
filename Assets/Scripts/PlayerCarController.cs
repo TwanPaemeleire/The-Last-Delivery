@@ -5,7 +5,14 @@ using UnityEngine.InputSystem;
 public class PlayerCarController : MonoBehaviour
 {
     [SerializeField] private float _movementSpeed = 10.0f;
+    private Rigidbody _rigidbody;
     private Vector2 _moveInput;
+
+    private void Awake()
+    {
+        _rigidbody = GetComponent<Rigidbody>();
+        _rigidbody.constraints = RigidbodyConstraints.FreezePosition | RigidbodyConstraints.FreezeRotation;
+    }
 
     private void Update()
     {
