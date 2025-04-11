@@ -59,10 +59,12 @@ public class PlayerCarController : MonoBehaviour
     private void OnEnable()
     {
         _rigidbody.constraints = RigidbodyConstraints.None;
+        _rigidbody.isKinematic = false;
     }
     private void OnDisable()
     {
         _rigidbody.constraints = RigidbodyConstraints.FreezeAll;
+        _rigidbody.isKinematic = true;
     }
 
 

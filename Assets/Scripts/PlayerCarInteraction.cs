@@ -10,13 +10,13 @@ public class PlayerCarInteraction : MonoBehaviour
     [SerializeField] private CinemachineCamera _vehicleCamera;
     [SerializeField] private TextMeshPro _enterText;
     [SerializeField] private PlayerCarBehavior _playerCarBehavior;
+
     private bool _playerIsDriving = false;
     private bool _canEnterCar = false;
     private bool _canExitCar = true;
+
     private PlayerCarController _playerCarController;
     private PlayerInput _playerInput;
-    private PlayerMovement _playerMovement;
-    private PlayerLooking _playerLooking;
 
     private void Start()
     {
@@ -28,8 +28,6 @@ public class PlayerCarInteraction : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         _playerInput = other.GetComponent<PlayerInput>();
-        _playerMovement = other.GetComponent<PlayerMovement>();
-        _playerLooking = other.GetComponent<PlayerLooking>();
         if (_playerInput == null) return;
         _enterText.enabled = true;
         _canEnterCar = true;
@@ -44,19 +42,15 @@ public class PlayerCarInteraction : MonoBehaviour
 
     public void OnExitCar(InputAction.CallbackContext context)
     {
-        if(context.canceled)
+        if (!context.canceled) return;
+        if (_playerIsDriving && _canExitCar)
         {
-            if(_playerIsDriving && _canExitCar)
-            {
-                Debug.Log("EXIT CAR");
-                _playerIsDriving = false;
-                _playerInput.SwitchCurrentActionMap("Player");
-                _playerCarController.enabled = false;
-                _playerCarBehavior.ExitCar(transform);
-                _playerCamera.gameObject.SetActive(true);
-                _vehicleCamera.gameObject.SetActive(false);
-                Invoke("OnCameraBlendFinished", _cinemachineBrain.DefaultBlend.Time);
-            }
+            _playerIsDriving = false;
+            _playerCarController.enabled = false;
+            _playerCarBehavior.ExitCar(transform);
+            _playerCamera.gameObject.SetActive(true);
+            _vehicleCamera.gameObject.SetActive(false);
+            Invoke("OnCameraBlendFinished", _cinemachineBrain.DefaultBlend.Time);
         }
     }
 
@@ -82,8 +76,7 @@ public class PlayerCarInteraction : MonoBehaviour
         }
         else
         {
-            _playerMovement.enabled = true;
-            _playerLooking.enabled = true;
+            _playerCarBehavior.OnCameraReachedPlayer();
         }
     }
 }
