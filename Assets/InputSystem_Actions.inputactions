@@ -24,6 +24,15 @@
                     "initialStateCheck": true
                 },
                 {
+                    "name": "EnterVehicle",
+                    "type": "Button",
+                    "id": "eeef9b2c-0f7f-4c60-9f1b-7dc2e0085aa9",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
                     "name": "Attack",
                     "type": "Button",
                     "id": "6c2ab1b8-8984-453a-af3d-a3c78ae1679a",
@@ -36,7 +45,7 @@
                     "name": "Interact",
                     "type": "Button",
                     "id": "852140f2-7766-474d-8707-702459ba45f3",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "Hold",
                     "initialStateCheck": false
@@ -470,6 +479,17 @@
                     "processors": "",
                     "groups": "Keyboard&Mouse",
                     "action": "Crouch",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "53a5c9a4-00b0-4b13-b5f1-5fdfe12b1a91",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "EnterVehicle",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
@@ -1014,7 +1034,7 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "EnterOrExitCar",
+                    "name": "ExitVehicle",
                     "type": "Button",
                     "id": "338c696b-ceeb-43a6-8424-f4b361612745",
                     "expectedControlType": "",
@@ -1185,7 +1205,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "EnterOrExitCar",
+                    "action": "ExitVehicle",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

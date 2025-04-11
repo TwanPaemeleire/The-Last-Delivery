@@ -56,6 +56,16 @@ public class PlayerCarController : MonoBehaviour
         _rigidbody.linearVelocity = newVelocity;
     }
 
+    private void OnEnable()
+    {
+        _rigidbody.constraints = RigidbodyConstraints.None;
+    }
+    private void OnDisable()
+    {
+        _rigidbody.constraints = RigidbodyConstraints.FreezeAll;
+    }
+
+
     public void OnSteer(InputAction.CallbackContext context)
     {
         _moveInput = context.ReadValue<Vector2>();

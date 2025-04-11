@@ -258,7 +258,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f400d4131635c55438dbca7dbf6a72f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _movementSpeed: 10
 --- !u!114 &8387226993211018988
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -318,7 +317,7 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0

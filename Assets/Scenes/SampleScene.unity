@@ -600,6 +600,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1980661436 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5735447414369921054, guid: aee10d715a082a245969828ef3aa1cd2, type: 3}
+  m_PrefabInstance: {fileID: 1986781970}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1980661443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1980661436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81b671f4d8bf7f64a9d15723f141b147, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1986781970
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -656,6 +673,10 @@ PrefabInstance:
       propertyPath: m_ActionEvents.Array.data[21].m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1269286270}
+    - target: {fileID: 3798621163401461650, guid: aee10d715a082a245969828ef3aa1cd2, type: 3}
+      propertyPath: m_ActionEvents.Array.data[22].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1269286270}
     - target: {fileID: 5735447414369921054, guid: aee10d715a082a245969828ef3aa1cd2, type: 3}
       propertyPath: m_Name
       value: Player
@@ -663,7 +684,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5735447414369921054, guid: aee10d715a082a245969828ef3aa1cd2, type: 3}
+      insertIndex: 4
+      addedObject: {fileID: 1980661443}
   m_SourcePrefab: {fileID: 100100000, guid: aee10d715a082a245969828ef3aa1cd2, type: 3}
 --- !u!1001 &5913300776215272748
 PrefabInstance:
@@ -714,12 +738,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1096243856412085738, guid: e1c57336f732ec84f8dc16c1c8b9c4b7, type: 3}
-      propertyPath: m_UseGravity
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1096243856412085738, guid: e1c57336f732ec84f8dc16c1c8b9c4b7, type: 3}
       propertyPath: m_Constraints
-      value: 0
+      value: 126
       objectReference: {fileID: 0}
     - target: {fileID: 7997941684546129301, guid: e1c57336f732ec84f8dc16c1c8b9c4b7, type: 3}
       propertyPath: m_Name
@@ -733,6 +753,10 @@ PrefabInstance:
       propertyPath: _cinemachineBrain
       value: 
       objectReference: {fileID: 330585548}
+    - target: {fileID: 8387226993211018988, guid: e1c57336f732ec84f8dc16c1c8b9c4b7, type: 3}
+      propertyPath: _playerCarBehavior
+      value: 
+      objectReference: {fileID: 1980661443}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
