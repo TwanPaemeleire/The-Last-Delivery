@@ -1,9 +1,13 @@
 using TMPro;
+using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class PlayerCarInteraction : MonoBehaviour
 {
+    [SerializeField] private CinemachineBrain _cinemachineBrain;
+    [SerializeField] private CinemachineCamera _playerCamera; 
+    [SerializeField] private CinemachineCamera _vehicleCamera;
     [SerializeField] private TextMeshPro _enterText;
     private bool _playerIsDriving = false;
     private bool _canEnterCar = false;
@@ -17,6 +21,7 @@ public class PlayerCarInteraction : MonoBehaviour
     {
         _enterText.enabled = false;
         _playerCarController = GetComponent<PlayerCarController>();
+        _playerCarController.enabled = false;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -47,6 +52,8 @@ public class PlayerCarInteraction : MonoBehaviour
                 _playerMovement.enabled = false;
                  _playerLooking.enabled = false;
                 _playerCarController.enabled = true;
+                _playerCamera.gameObject.SetActive(false);
+                _vehicleCamera.gameObject.SetActive(true);
             }
             else if(_playerIsDriving && _canExitCar)
             {
@@ -55,6 +62,8 @@ public class PlayerCarInteraction : MonoBehaviour
                 _playerMovement.enabled = true;
                 _playerLooking.enabled = true;
                 _playerCarController.enabled = false;
+                _playerCamera.gameObject.SetActive(true);
+                _vehicleCamera.gameObject.SetActive(false);
             }
         }
     }

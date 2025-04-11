@@ -1014,7 +1014,7 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "ExitCar",
+                    "name": "EnterOrExitCar",
                     "type": "Button",
                     "id": "338c696b-ceeb-43a6-8424-f4b361612745",
                     "expectedControlType": "",
@@ -1185,7 +1185,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "ExitCar",
+                    "action": "EnterOrExitCar",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
