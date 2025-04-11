@@ -51,20 +51,32 @@ public class PlayerCarInteraction : MonoBehaviour
                 _playerInput.SwitchCurrentActionMap("Driving");
                 _playerMovement.enabled = false;
                  _playerLooking.enabled = false;
-                _playerCarController.enabled = true;
                 _playerCamera.gameObject.SetActive(false);
                 _vehicleCamera.gameObject.SetActive(true);
+                Invoke("OnCameraBlendFinished", _cinemachineBrain.DefaultBlend.Time);
             }
             else if(_playerIsDriving && _canExitCar)
             {
                 _playerIsDriving = false;
                 _playerInput.SwitchCurrentActionMap("Player");
-                _playerMovement.enabled = true;
-                _playerLooking.enabled = true;
                 _playerCarController.enabled = false;
                 _playerCamera.gameObject.SetActive(true);
                 _vehicleCamera.gameObject.SetActive(false);
+                Invoke("OnCameraBlendFinished", _cinemachineBrain.DefaultBlend.Time);
             }
+        }
+    }
+
+    private void OnCameraBlendFinished()
+    {
+        if (_playerIsDriving)
+        {
+            _playerCarController.enabled = true;
+        }
+        else
+        {
+            _playerMovement.enabled = true;
+            _playerLooking.enabled = true;
         }
     }
 }

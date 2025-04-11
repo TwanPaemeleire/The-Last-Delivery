@@ -271,6 +271,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d1f19ba7ed7f5c418e61bd1855d3858, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _cinemachineBrain: {fileID: 0}
   _playerCamera: {fileID: 0}
   _vehicleCamera: {fileID: 2549116161211279899}
   _enterText: {fileID: 7341391256754025832}
@@ -338,7 +339,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7715319317790293930
 Transform:
   m_ObjectHideFlags: 0
@@ -367,7 +368,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Priority:
-    Enabled: 1
+    Enabled: 0
     m_Value: 0
   OutputChannel: 1
   StandbyUpdate: 2
