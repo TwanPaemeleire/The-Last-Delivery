@@ -492,7 +492,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d1f19ba7ed7f5c418e61bd1855d3858, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1515688109
+--- !u!1 &1393926789
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -500,24 +500,24 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1515688113}
-  - component: {fileID: 1515688112}
-  - component: {fileID: 1515688111}
-  - component: {fileID: 1515688110}
+  - component: {fileID: 1393926793}
+  - component: {fileID: 1393926792}
+  - component: {fileID: 1393926791}
+  - component: {fileID: 1393926790}
   m_Layer: 0
-  m_Name: TEMPFloor
+  m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!65 &1515688110
+--- !u!65 &1393926790
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1515688109}
+  m_GameObject: {fileID: 1393926789}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -532,13 +532,13 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!23 &1515688111
+--- !u!23 &1393926791
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1515688109}
+  m_GameObject: {fileID: 1393926789}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -577,25 +577,25 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &1515688112
+--- !u!33 &1393926792
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1515688109}
+  m_GameObject: {fileID: 1393926789}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &1515688113
+--- !u!4 &1393926793
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1515688109}
+  m_GameObject: {fileID: 1393926789}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 200, y: 0, z: 200}
+  m_LocalScale: {x: 120, y: 1, z: 120}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -679,7 +679,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 140950321354330045, guid: e1c57336f732ec84f8dc16c1c8b9c4b7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 140950321354330045, guid: e1c57336f732ec84f8dc16c1c8b9c4b7, type: 3}
       propertyPath: m_LocalPosition.z
@@ -713,6 +713,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1096243856412085738, guid: e1c57336f732ec84f8dc16c1c8b9c4b7, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1096243856412085738, guid: e1c57336f732ec84f8dc16c1c8b9c4b7, type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7997941684546129301, guid: e1c57336f732ec84f8dc16c1c8b9c4b7, type: 3}
       propertyPath: m_Name
       value: PlayerCar
@@ -740,6 +748,6 @@ SceneRoots:
   - {fileID: 330585546}
   - {fileID: 410087041}
   - {fileID: 832575519}
-  - {fileID: 1515688113}
   - {fileID: 5913300776215272748}
   - {fileID: 1986781970}
+  - {fileID: 1393926793}
