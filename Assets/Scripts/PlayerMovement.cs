@@ -7,6 +7,11 @@ public class PlayerMovement : MonoBehaviour
 
     private Vector2 _moveInput;
 
+    private void Start()
+    {
+        GetComponent<PlayerInput>().SwitchCurrentActionMap("Player");
+    }
+
     private void Update()
     {
         if (_moveInput == Vector2.zero) return;
