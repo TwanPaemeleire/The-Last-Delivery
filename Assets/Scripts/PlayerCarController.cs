@@ -10,6 +10,10 @@ public class PlayerCarController : MonoBehaviour
     private float _breakSpeed = 15.0f;
     private float _decelerationSpeed = 15.0f;
     private float _turnSpeed = 90.0f;
+    private float _ascendSpeed = 20.0f;
+    private float _descendSpeed = 20.0f;
+    private bool _isAscending = false;
+    private bool _isDescending = false;
     private float _currentSpeed;
     private Rigidbody _rigidbody;
     private Vector2 _moveInput;
@@ -50,6 +54,19 @@ public class PlayerCarController : MonoBehaviour
         }
         Vector3 newVelocity = transform.forward * _currentSpeed;
         _rigidbody.linearVelocity = newVelocity;
+
+        if(_isAscending)
+        {
+            Vector3 velocityWithAscending = _rigidbody.linearVelocity;
+            velocityWithAscending.y += _ascendSpeed * Time.deltaTime;
+            _rigidbody.linearVelocity = velocityWithAscending;
+        }
+        if (_isDescending)
+        {
+            Vector3 velocityWithDescending = _rigidbody.linearVelocity;
+            velocityWithDescending.y -= _descendSpeed * Time.deltaTime;
+            _rigidbody.linearVelocity = velocityWithDescending;
+        }
     }
 
     private void OnEnable()
@@ -76,11 +93,13 @@ public class PlayerCarController : MonoBehaviour
 
     public void OnAscend(InputAction.CallbackContext context)
     {
-
+        if(context.started) _isAscending = true;
+        else if(context.canceled) _isAscending = false;
     }
 
     public void OnDescend(InputAction.CallbackContext context)
     {
-
+        if (context.started) _isDescending = true;
+        else if (context.canceled) _isDescending = false;
     }
 }

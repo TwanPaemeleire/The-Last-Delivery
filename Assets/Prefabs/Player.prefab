@@ -44,6 +44,7 @@ GameObject:
   - component: {fileID: 3798621163401461650}
   - component: {fileID: 1915563230505032486}
   - component: {fileID: 5929289387046242397}
+  - component: {fileID: 5215156474245207274}
   - component: {fileID: 2659286122000747931}
   - component: {fileID: 5387627463683068026}
   m_Layer: 0
@@ -248,6 +249,38 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: eeef9b2c-0f7f-4c60-9f1b-7dc2e0085aa9
     m_ActionName: Player/EnterVehicle
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: PlayerCarController, Assembly-CSharp
+        m_MethodName: OnAscend
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 9566c981-6de9-4c5f-9ea4-afb01ec0dfa7
+    m_ActionName: 'Driving/Ascend[/Keyboard/space]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: PlayerCarController, Assembly-CSharp
+        m_MethodName: OnDescend
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 0caa7841-0692-43fd-bb97-18b98c7ff80a
+    m_ActionName: 'Driving/Descend[/Keyboard/ctrl]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -279,6 +312,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _movementSpeed: 10
+--- !u!114 &5215156474245207274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5735447414369921054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81b671f4d8bf7f64a9d15723f141b147, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!54 &2659286122000747931
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -287,7 +332,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5735447414369921054}
   serializedVersion: 4
-  m_Mass: 2000
+  m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
