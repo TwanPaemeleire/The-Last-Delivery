@@ -10,8 +10,8 @@ public class PlayerCarController : MonoBehaviour
     private float _breakSpeed = 15.0f;
     private float _decelerationSpeed = 15.0f;
     private float _turnSpeed = 90.0f;
-    private float _ascendSpeed = 20.0f;
-    private float _descendSpeed = 20.0f;
+    private float _ascendSpeed = 2000.0f;
+    private float _descendSpeed = 2000.0f;
     private bool _isAscending = false;
     private bool _isDescending = false;
     private float _currentSpeed;
